@@ -15,4 +15,6 @@ public class ProductController {
         model.addAttribute("db", productService.findAllProducts());
         return "./products";
     }
+
 }
+
