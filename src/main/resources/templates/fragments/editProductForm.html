@@ -1,0 +1,6 @@
+<form method="post" th:action="'/editedProduct?productId=' + ${product.getId()}">
+  <input name="name" placeholder="name" th:value="${product.getName()}">
+  <input name="desc" placeholder="Description" th:value="${product.getDesc()}">
+  <input name="imgUrl" placeholder="Url of image" th:value="${product.getImgUrl()}">
+  <button>Save changes</button>
+</form>

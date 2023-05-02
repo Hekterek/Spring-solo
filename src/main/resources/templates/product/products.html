@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:replace="~{fragments/mainMenu}" ></div><hr>
+    <p>Produkty: </p>
+    <ol>
+        <li th:each="product : ${db}" >
+            <span th:text="${product.getName()}" ></span>
+            <a th:href="'/removeProduct?productId=' + ${product.getId()}" >[remove]</a>
+            <a th:href="'/editProduct?productId=' + ${product.getId()}" >[edit]</a>
+        </li>
+    </ol><hr>
+    <div th:replace="~{fragments/addProductForm}" ></div>
+
+</body>
+</html>
