@@ -7,13 +7,13 @@
 <body>
     <div th:replace="~{fragments/mainMenu}" ></div><hr>
     <p>Produkty: </p>
-    <ol>
+    <ul>
         <li th:each="product : ${db}" >
             <span th:text="${product.getName()}" ></span>
             <a th:href="'/removeProduct?productId=' + ${product.getId()}" >[remove]</a>
             <a th:href="'/editProduct?productId=' + ${product.getId()}" >[edit]</a>
         </li>
-    </ol><hr>
+    </ul><hr>
     <div th:replace="~{fragments/addProductForm}" ></div>
 
 </body>
