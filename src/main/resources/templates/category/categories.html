@@ -11,6 +11,7 @@
         <li th:each="category : ${db}" >
             <span th:text="${category.getName()}" ></span>
         </li>
-    </ul>
+    </ul><hr>
+    <div th:replace="~{fragments/addCategoryForm}" ></div>
 </body>
 </html>

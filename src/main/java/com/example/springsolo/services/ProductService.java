@@ -1,6 +1,7 @@
 package com.example.springsolo.services;
 
 import com.example.springsolo.models.Product;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
