@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class CategoryService {
 
     List<productCategory> database = new ArrayList<>();
@@ -29,5 +29,9 @@ public class CategoryService {
         }
         category.setId(nextId);
         database.add(category);
+    }
+
+    public void removeCategory(Integer categoryId) {
+        database.removeIf(category -> category.getId().equals(categoryId));
     }
 }

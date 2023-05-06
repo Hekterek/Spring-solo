@@ -10,6 +10,8 @@
     <ul>
         <li th:each="category : ${db}" >
             <span th:text="${category.getName()}" ></span>
+            <a th:href="'/removeCategory?categoryId=' + ${category.getId()}" >[remove]</a>
+            <a th:href="'/editCategory?categoryId=' + ${category.getId()}" >[edit]</a>
         </li>
     </ul><hr>
     <div th:replace="~{fragments/addCategoryForm}" ></div>
